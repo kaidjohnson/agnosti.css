@@ -1,0 +1,44 @@
+/**
+ * Implementations
+ * 1. normalize.css <https://github.com/necolas/normalize.css/blob/master/normalize.css>
+ * 2. Eric Meyer CSS Reset 2 <http://meyerweb.com/eric/tools/css/reset/>
+ * 3. HTML5 Doctor <http://html5doctor.com/html-5-reset-stylesheet/>
+ * 4. YUI 3 Reset <http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset.css>
+ */
+
+/* IE <11 */
+/* http://caniuse.com/#search=hidden */
+
+[hidden] {
+	display: none; /* 1 */
+}
+
+/* IE <10 */
+audio,
+canvas,
+progress,
+video {
+	display: inline-block; /* 1 */
+}
+
+/* IE <9 */
+article, /* 1, 2, 3 */
+aside, /* 1, 2, 3 */
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block; /* 1, 2, 3 */
+}
+
+/* IE <8 */
+img {
+  -ms-interpolation-mode: bicubic;
+}
