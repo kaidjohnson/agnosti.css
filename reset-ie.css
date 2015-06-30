@@ -13,6 +13,10 @@
 	display: none; /* 1 */
 }
 
+textarea {
+  overflow: auto; /* 1 */ /* IE 8-11 */
+}
+
 /* IE <10 */
 audio,
 canvas,

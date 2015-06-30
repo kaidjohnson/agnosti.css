@@ -17,7 +17,7 @@ audio, /* 2, 3 */
 b, /* 2, 3 */
 /* big, */ /* 2 */ /* @deprecated */
 blockquote, /* 2, 3, 4 */
-body, /* [1], 2, 3, 4 */
+/* body, [> [1], 2, 3, 4 <]  */
 button, /* [1] */
 canvas, /* 2, 3 */
 caption, /* 2, 3 */
@@ -40,7 +40,7 @@ footer, /* 2, 3 */
 form, /* 2, 3, 4 */
 header, /* 2, 3 */
 hgroup, /* 2, 3 */
-html, /* 2, 3 */
+/* html, [> 2, 3 <] */ /* Doesn't do anything. */
 h1, /* 2, 3, 4 */
 h2, /* 2, 3, 4 */
 h3, /* 2, 3, 4 */
@@ -59,14 +59,14 @@ li, /* 2, 3, 4 */
 main, /* */
 mark, /* 2, 3 */
 menu, /* 2, 3 */
-meter, /* */
+/* meter, [> <] */
 nav, /* 2, 3 */
 object, /* 2, 3 */
 ol, /* 2, 3, 4 */
 output, /* 2 */
 p, /* 2, 3, 4 */
 pre, /* 2, 3, 4 */
-progress, /* */
+/* progress, [> <] */
 q, /* 2, 3 */
 ruby, /* 2 */
 s, /* 2 */
@@ -99,39 +99,44 @@ video { /* [1], 2, 3 */
   /* outline: 0; */ /* 3 */
   /* box-shadow: none; */ /* */
   vertical-align: baseline; /* [1], 2, 3 */
-	/* font-size: 100% */ /* 2, 3, [4] */
-	/* font: inherit */ /* [1], 2, [4] */
-	/* background: transparent */ /* [1], 3 */
+  /* font-size: 100% */ /* 2, 3, [4] */
+  /* font: inherit */ /* [1], 2, [4] */
+  /* background: transparent */ /* [1], 3 */
 }
 
 /** @deprecated */
-acronym {
-	vertical-align: baseline;
-}
+/* acronym { */
+  /* vertical-align: baseline; */
+/* } */
 
 html {
   overflow-y: scroll; /* */
-  min-height: 100%; /* */
+  -ms-text-size-adjust: 100%; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 1 */
 }
 
 body {
-  font-size: 16px; /* */
+	margin: 0; /* 1, 2, 3, 4 */
+	font-size: 100%; /* 2, 3 */
   line-height: 1; /* 2, 3 */
-  min-height: 100%; /* */
+}
+
+html, body {
+	height: 100%;
 }
 
 ul {
-  list-style: none; /* 2, [3], 4 */
+  /* list-style: none; [> 2, [3], 4 <] */ /* opinion */
 }
 
 blockquote, q {
-  quotes: none; /* 2, 3 */
+  /* quotes: none; [> 2, 3 <] */
 }
 
-blockquote:before, blockquote:after,
+/* blockquote:before, blockquote:after, */
 q:before, q:after {
-  content: ''; /* 2, 3 */
-  content: none; /* 2, 3 */
+	content: ''; /* 2, 3 */
+	content: none; /* 2, 3 */
 }
 
 /* ins { */
@@ -139,7 +144,7 @@ q:before, q:after {
 /* } */
 
 /* del { */
-	/* text-decoration: line-through; [> 3 <] */
+  /* text-decoration: line-through; [> 3 <] */
 /* } */
 
 table { /* Tables still need 'cellspacing="0"' in the markup. */
@@ -149,27 +154,29 @@ table { /* Tables still need 'cellspacing="0"' in the markup. */
 
 textarea {
   resize: none;
-  overflow: auto; /* 1 */ /* IE 8-11 */
   font: inherit; /* 1, 4 */
 }
 
 button {
-	overflow: visible; /* 1 */ /* IE 8 - 11 */
+  overflow: visible; /* 1 */ /* IE 8 - 11 */
 }
 
 button,
 select {
-	text-transform: none; /* 1 */
+  text-transform: none; /* 1 */
 }
 
-/* optgroup, */ /* 1 */
-button,
+/* button, */
 input,
-select {
-	/* color: inherit; */ /* 1 */
-  line-height: 1; /* [1] */
-  vertical-align: middle; /* */
+optgroup, /* 1 */
+select,
+textarea {
+	/* margin: 0; [> 1, 4 <] */
   font: inherit; /* 1, 4 */
+	vertical-align: middle;
+  /* color: inherit; */ /* 1 */
+  line-height: 1; /* [1] */
+  /* vertical-align: middle; [> <] */
 }
 
 button,
@@ -183,17 +190,17 @@ input[type="submit"] {
 
 input[type="checkbox"],
 input[type="radio"] {
-	box-sizing: border-box; /* 1 */
-	padding: 0; /* 1 */
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 1 */
 }
 
 hr {
-	box-sizing: content-box; /* 1 */
-	height: 0; /* 1 */
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
 }
 
 pre {
-	overflow: auto; /* 1 */
+  overflow: auto; /* 1 */
 }
 
 /* -- HTML5 Legacy Browser Support -- */
@@ -202,8 +209,10 @@ pre {
   /* font-style: normal; */ /* [4] */
 /* } */
 
-progress {
-	vertical-align: middle; /* [1] */
+progress,
+meter {
+	/* Chrome's default is -0.2em. Make everyone else's too. */
+  vertical-align: -0.2em; /* middle; /* [1] */
 }
 
 audio:not([controls]) {
@@ -220,13 +229,13 @@ svg:not(:root) {
 /* -- Webkit -- */
 
 /* ::-webkit-file-upload-button{ */
-	/* cursor: pointer; */
-	/* -webkit-appearance: none; */
+  /* cursor: pointer; */
+  /* -webkit-appearance: none; */
   /* line-height: 1; */
   /* vertical-align: middle; */
   /* font: inherit; */
-	/* border: none; */
-	/* padding: 0; */
+  /* border: none; */
+  /* padding: 0; */
 /* } */
 
 /* -- Firefox -- */
