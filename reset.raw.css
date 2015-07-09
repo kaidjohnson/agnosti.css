@@ -1,0 +1,253 @@
+/**
+ * Implementations
+ * 1. normalize.css <https://raw.githubusercontent.com/necolas/normalize.css/master/normalize.css>
+ * 2. Eric Meyer CSS Reset 2 <http://meyerweb.com/eric/tools/css/reset/>
+ * 3. HTML5 Doctor <http://html5doctor.com/html-5-reset-stylesheet/>
+ * 4. YUI 3 Reset <http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset.css>
+ */
+
+/* a, */ /* 2 */
+abbr, /* 2, 3, [4] */
+/* acronym, */ /* 2, [4] */ /* @deprecated */
+address, /* 2, 3, [4] */
+/* applet, */ /* 2 */ /* Not supported in HTML5 */
+article, /* 2, 3 */
+aside, /* 2, 3 */
+audio, /* 2, 3 */
+b, /* 2, 3 */
+/* big, */ /* 2 */ /* @deprecated */
+blockquote, /* 2, 3, 4 */
+/* body, [> [1], 2, 3, 4 <]  */
+/* button, [> [1] <] */
+canvas, /* 2, 3 */
+caption, /* 2, 3 */
+/* center, */ /* 2 */ /* @deprecated */
+cite, /* 2, 3 */
+code, /* 2, 3, 4 */
+dd, /* 2, 3, 4 */
+del, /* 2, 3 */
+details, /* 2, 3 */
+dfn, /* 2, 3 */
+div, /* 2, 3, 4 */
+dl, /* 2, 3, 4 */
+dt, /* 2, 3, 4 */
+em, /* 2, 3 */
+embed, /* 2 */
+/* fieldset, [> [1], 2, 3, 4 <] */
+figcaption, /* 2, 3 */
+figure, /* 2, 3 */
+footer, /* 2, 3 */
+form, /* 2, 3, 4 */
+header, /* 2, 3 */
+hgroup, /* 2, 3 */
+/* html, [> 2, 3 <] */ /* Doesn't do anything. */
+h1, /* 2, 3, 4 */
+h2, /* 2, 3, 4 */
+h3, /* 2, 3, 4 */
+h4, /* 2, 3, 4 */
+h5, /* 2, 3, 4 */
+h6, /* 2, 3, 4 */
+i, /* 2, 3 */
+iframe, /* 2, 3 */
+img, /* [1], 2, 3, [4] */
+/* input, [> [1] <] */
+ins, /* 2, 3 */
+kbd, /* 2, 3 */
+label, /* 2, 3 */
+/* legend, [> [1], 2, 3, 4 <] */
+li, /* 2, 3, 4 */
+main, /* */
+mark, /* 2, 3 */
+menu, /* 2, 3 */
+/* meter, [> <] */
+nav, /* 2, 3 */
+object, /* 2, 3 */
+ol, /* 2, 3, 4 */
+output, /* 2 */
+p, /* 2, 3, 4 */
+pre, /* 2, 3, 4 */
+/* progress, [> <] */
+q, /* 2, 3 */
+ruby, /* 2 */
+s, /* 2 */
+samp, /* 2, 3 */
+section, /* 2, 3 */
+small, /* 2, 3 */
+span, /* 2, 3 */
+/* strike, */ /* 2 */ /* @deprecated */
+strong, /* 2, 3 */
+sub, /* 2, 3, [4] */
+summary, /* 2, 3 */
+sup, /* 2, 3 */
+table, /* 2, 3 */
+tbody, /* 2, 3 */
+td, /* 2, 3 */
+/* textarea, [> [1], 4 <] */
+tfoot, /* 2, 3 */
+th, /* 2, 3 */
+thead, /* 2, 3 */
+time, /* 2, 3 */
+tr, /* 2, 3 */
+/* tt, */ /* 2 */ /* @deprecated */
+u, /* 2 */
+ul, /* 2, 3, 4 */
+var, /* 2, 3 */
+video { /* [1], 2, 3 */
+	/* padding: 0; [> [1], 2, 3, [4] <] */
+	/* vertical-align: baseline; [> [1], 2, 3 <] */
+}
+
+/** @deprecated */
+/* acronym { */
+  /* vertical-align: baseline; */
+/* } */
+
+html {
+	/* Ignore font-family, as it's likely a theme will provide this */
+  overflow-y: scroll; /* */
+  -ms-text-size-adjust: 100%; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 1 */
+}
+
+body {
+	margin: 0; /* 1, 2, 3, 4 */
+	font-size: 100%; /* 2, 3 */
+  line-height: 1; /* 2, 3 */
+}
+
+html, body {
+	height: 100%;
+}
+
+/* ul { */
+  /* list-style: none; [> 2, [3], 4 <] */ /* opinion */
+/* } */
+
+/* blockquote, q { */
+  /* quotes: none; [> 2, 3 <] */
+/* } */
+
+/* blockquote:before, blockquote:after, */
+/* q:before, q:after { */
+/* content: ''; [> 2, 3 <] */
+/* content: none; [> 2, 3 <] */
+/* } */
+
+/* ins { */
+  /* text-decoration: none; [> 3 <] */
+/* } */
+
+/* del { */
+  /* text-decoration: line-through; [> 3 <] */
+/* } */
+
+table { /* Tables still need 'cellspacing="0"' in the markup. */
+  border-collapse: collapse; /* 1, 2, 3, 4 */
+  border-spacing: 0; /* 1, 2, 3, 4 */
+}
+
+td, th {
+	padding: 0;
+}
+
+button,
+select {
+  text-transform: none; /* 1 */
+}
+
+input[disabled],
+button[disabled] {
+	cursor: not-allowed;
+}
+
+button,
+input,
+optgroup, /* 1 */
+select,
+legend,
+fieldset,
+textarea {
+	margin: 0; /* 1, 4 */
+	border: 0;
+	padding: 0;
+	font: inherit; /* 1, 4 */
+  line-height: normal; /* 1 */
+}
+
+textarea,
+input {
+	vertical-align: text-top;
+}
+
+button,
+/* html */ input[type="button"], /* 1 */
+input[type="reset"],
+input[type="submit"],
+input[type="file"] {
+  cursor: pointer; /* 1 */
+	appearance: none; /* [1] */
+  /* -moz-appearance: none; */
+  /* -webkit-appearance: none; [> 1 <] */
+}
+
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+}
+
+pre {
+  overflow: auto; /* 1 */
+}
+
+/* -- HTML5 Legacy Browser Support -- */
+
+/* address, cite, dfn, i, var { */
+  /* font-style: normal; */ /* [4] */
+/* } */
+
+progress,
+meter {
+	/* Chrome's default is -0.2em. Make everyone else's too. */
+  vertical-align: -0.2em; /* middle; /* [1] */
+}
+
+audio:not([controls]) {
+  display: none; /* 1 */
+  height: 0; /* 1 */
+}
+
+template {
+	display: none; /* 1 */
+}
+
+abbr[title] {
+	border-bottom: 1px dotted; /* 1 */
+	cursor: help;
+}
+
+a:active,
+a:hover {
+	outline: 0; /* 1 */
+}
+
+/* -- Webkit -- */
+
+/* Ignore file upload as a good theme will override this anyway. */
+/* ::-webkit-file-upload-button{ */
+	/* [> margin: 0; [> 1, 4 <] <] */
+	/* font: inherit; [> 1, 4 <] */
+	/* vertical-align: baseline; */
+  /* [> color: inherit; */ /* 1 <] */
+  /* line-height: 1; [> [1] <] */
+  /* [> vertical-align: middle; [> <] <] */
+	/* border: 0; */
+	/* padding: 0; */
+	/* cursor: pointer; */
+/* } */
+
+/* -- Firefox -- */
+
+::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
