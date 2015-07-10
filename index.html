@@ -10,7 +10,13 @@
 		<link rel="apple-touch-icon" href="apple-touch-icon.png">
 		<!-- Place favicon.ico in the root directory -->
 
-		<link rel="stylesheet" href="reset.css">
+		<link rel="stylesheet" href="normalize.css">
+
+		<style>
+			body {
+				background: #eee;
+			}
+		</style>
 	</head>
 	<body>
 		<header>
@@ -40,22 +46,22 @@
 			<h1>Block-Level Elements</h1>
 
 			<address>Expect an &lt;address&gt; element to make text italic.</address>
-			<article>Expect an &lt;article&gt; element to leave text unstyled.</article>
-			<aside>Expect an &lt;aside&gt; element to leave text unstyled.</aside>
 			<blockquote>Expect a &lt;blockquote&gt; element to add margins and leave text unstyled.</blockquote>
-			<div>Expect a &lt;div&gt; element to leave text unstyled.</div>
 			<figcaption>Expect a &lt;figcaption&gt; element to leave text unstyled.</figcaption>
 			<figure>Expect a &lt;figure&gt; element to add margins and leave text unstyled.</figure>
-			<footer>Expect a &lt;footer&gt; element to leave text unstyled.</footer>
-			<form>Expect a &lt;form&gt; element to leave text unstyled.</form>
+			<div>Expect a &lt;div&gt; element to leave text unstyled.</div>
 			<header>Expect a &lt;header&gt; element to leave text unstyled.</header>
 			<hgroup>Expect a &lt;hgroup&gt; element to leave text unstyled.</hgroup>
-			<main>Expect a &lt;main&gt; element to leave text unstyled.</main>
 			<nav>Expect a &lt;nav&gt; element to leave text unstyled.</nav>
+			<main>Expect a &lt;main&gt; element to leave text unstyled.</main>
+			<section>Expect a &lt;section&gt; element to leave text unstyled.</section>
+			<article>Expect an &lt;article&gt; element to leave text unstyled.</article>
+			<aside>Expect an &lt;aside&gt; element to leave text unstyled.</aside>
+			<footer>Expect a &lt;footer&gt; element to leave text unstyled.</footer>
+			<form>Expect a &lt;form&gt; element to leave text unstyled.</form>
 			<output>Expect a &lt;output&gt; element to leave text unstyled.</output>
 			<p>Expect a &lt;p&gt; element to add top and bottom margins and leave text unstyled.</p>
 			<pre>Expect a &lt;pre&gt; element to make text monospace.</pre>
-			<section>Expect a &lt;section&gt; element to leave text unstyled.</section>
 		</section>
 
 		<hr>
@@ -63,36 +69,38 @@
 		<section id="elements-inline">
 			<h1>Inline Elements</h1>
 
-			<p id="b">Expect the <b>&lt;b&gt;</b> element to make text <b>bold</b>.</p>
-			<p id="big">Expect the <big>&lt;big&gt;</big> element to make text <big>bigger</big>.</p>
-			<p id="i">Expect the <i>&lt;i&gt;</i> element to make text <i>italic</i>.</p>
-			<p id="small">Expect the <small>&lt;small&gt;</small> element to make text <small>smaller</small>.</p>
-			<p id="tt">Expect the <tt>&lt;tt&gt;</tt> element to make text <tt>monospace</tt>.</p>
-			<p id="abbr">Expect the <abbr>&lt;abbr&gt;</abbr> element without a title attribute to leave text <abbr>unstyled</abbr>.</p>
-			<p id="abbr-title">Expect the <abbr title="abbreviation">&lt;abbr&gt;</abbr> element with a title attribute to make text <abbr title="underlined">u</abbr>.</p>
-			<p id="acronym">Expect the <acronym>&lt;acronym&gt;</acronym> element to leave text <acronym>unstyled</acronym>.</p>
-			<p id="cite">Expect the <cite>&lt;cite&gt;</cite> element to make text <cite>italic</cite>.</p>
-			<p id="code">Expect the <code>&lt;code&gt;</code> element to make text <code>monospace</code>.</p>
-			<p id="dfn">Expect the <dfn>&lt;dfn&gt;</dfn> element to make text <dfn>italic</dfn>.</p>
-			<p id="em">Expect the <em>&lt;em&gt;</em> element to make text <em>italic</em>.</p>
-			<p id="kbd">Expect the <kbd>&lt;kbd&gt;</kbd> element to make text <kbd>monospace</kbd>.</p>
-			<p id="strong">Expect the <strong>&lt;strong&gt;</strong> element to make text <strong>bold</strong>.</p>
-			<p id="samp">Expect the <samp>&lt;samp&gt;</samp> element to make text <samp>monospace</samp>.</p>
-			<p id="var">Expect the <var>&lt;var&gt;</var> element to make text <var>italic</var>.</p>
-			<p id="mark">Expect the <mark>&lt;mark&gt;</mark> element to make text <mark>highlighted</mark>.</p>
-			<p id="a">Expect the <a>&lt;a&gt;</a> element without an href attribute to leave text <a>unstyled</a>.</p>
-			<p id="a-href">Expect the <a href="#a">&lt;a&gt;</a> element with an href attribute to make text <a href="#a">linked</a>.</p>
-			<p id="bdo">Expect the <bdo dir="rtl">&lt;bdo&gt;</bdo> element to make text <bdo dir="rtl">backwards</bdo>.</p>
-			<p id="br">Expect the &lt;br&gt; element to make text<br>break.</p>
-			<p id="q">Expect the <q>&lt;q&gt;</q> element to make text <q>quoted</q>.</p>
-			<p id="span">Expect the <span>&lt;span&gt;</span> element to leave text <span>unstyled</span>.</p>
-			<p id="sub">Expect the <sub>&lt;sub&gt;</sub> element to make text <sub>subscript</sub>.</p>
-			<p id="sup">Expect the <sup>&lt;sup&gt;</sup> element to make text <sup>superscript</sup>.</p>
-			<p id="button">Expect the <button>&lt;button&gt;</button> element to create a <button>button</button>.</p>
-			<p id="label">Expect the <label>&lt;label&gt;</label> element to leave text <label>unstyled</label>.</p>
-			<p id="textarea">Expect the <textarea>&lt;textarea&gt;</textarea> element to make a <textarea>textarea</textarea>.</p>
-			<p id="progress">Expect the &lt;progress&gt; element to be <progress></progress>.</p>
-			<p id="meter">Expect the &lt;meter&gt; element to be <meter></meter>.</p>
+			<p id="b">Expect a <b>&lt;b&gt;</b> element to make text <b>bold</b>.</p>
+			<p id="big">Expect a <big>&lt;big&gt;</big> element to make text <big>bigger</big>.</p>
+			<p id="i">Expect a <i>&lt;i&gt;</i> element to make text <i>italic</i>.</p>
+			<p id="small">Expect a <small>&lt;small&gt;</small> element to make text <small>smaller</small>.</p>
+			<p id="tt">Expect a <tt>&lt;tt&gt;</tt> element to make text <tt>monospace</tt>.</p>
+			<p id="abbr">Expect a <abbr>&lt;abbr&gt;</abbr> element without a title attribute to leave text <abbr>unstyled</abbr>.</p>
+			<p id="abbr-title">Expect a <abbr title="abbreviation">&lt;abbr&gt;</abbr> element with a title attribute to make text <abbr title="underlined">u</abbr>.</p>
+			<p id="acronym">Expect a <acronym>&lt;acronym&gt;</acronym> element to leave text <acronym>unstyled</acronym>.</p>
+			<p id="cite">Expect a <cite>&lt;cite&gt;</cite> element to make text <cite>italic</cite>.</p>
+			<p id="code">Expect a <code>&lt;code&gt;</code> element to make text <code>monospace</code>.</p>
+			<p id="dfn">Expect a <dfn>&lt;dfn&gt;</dfn> element to make text <dfn>italic</dfn>.</p>
+			<p id="em">Expect a <em>&lt;em&gt;</em> element to make text <em>italic</em>.</p>
+			<p id="kbd">Expect a <kbd>&lt;kbd&gt;</kbd> element to make text <kbd>monospace</kbd>.</p>
+			<p id="strong">Expect a <strong>&lt;strong&gt;</strong> element to make text <strong>bold</strong>.</p>
+			<p id="samp">Expect a <samp>&lt;samp&gt;</samp> element to make text <samp>monospace</samp>.</p>
+			<p id="var">Expect a <var>&lt;var&gt;</var> element to make text <var>italic</var>.</p>
+			<p id="mark">Expect a <mark>&lt;mark&gt;</mark> element to make text <mark>highlighted</mark>.</p>
+			<p id="a">Expect a <a>&lt;a&gt;</a> element without an href attribute to leave text <a>unstyled</a>.</p>
+			<p id="a-href">Expect a <a href="#a">&lt;a&gt;</a> element with an href attribute to make text <a href="#a">linked</a>.</p>
+			<p id="bdo">Expect a <bdo dir="rtl">&lt;bdo&gt;</bdo> element to make text <bdo dir="rtl">backwards</bdo>.</p>
+			<p id="br">Expect a &lt;br&gt; element to make text<br>break.</p>
+			<p id="q">Expect a <q>&lt;q&gt;</q> element to make text <q>quoted</q>.</p>
+			<p id="span">Expect a <span>&lt;span&gt;</span> element to leave text <span>unstyled</span>.</p>
+			<p id="sub">Expect a <sub>&lt;sub&gt;</sub> element to make text <sub>subscript</sub>.</p>
+			<p id="sup">Expect a <sup>&lt;sup&gt;</sup> element to make text <sup>superscript</sup>.</p>
+			<p id="button">Expect a <button>&lt;button&gt;</button> element to create a <button>button</button>.</p>
+			<p id="label">Expect a <label>&lt;label&gt;</label> element to leave text <label>unstyled</label>.</p>
+			<p id="textarea">Expect a <textarea>&lt;textarea&gt;</textarea> element to make a <textarea>textarea</textarea>.</p>
+			<p id="progress">Expect a &lt;progress&gt; element to be <progress></progress>.</p>
+			<p id="meter">Expect a &lt;meter&gt; element to be <meter></meter>.</p>
+			<p id="ins">Expect an &lt;ins&gt; element to be <ins>underlined</ins>.</p>
+			<p id="del">Expect a &lt;del&gt; element to be <del>striked through</del>.</p>
 		</section>
 
 		<hr>
@@ -132,46 +140,92 @@
 			<h1>Forms</h1>
 
 			<form>
-				<fieldset>
+				<fieldset id="legend">
 					<legend>Expect a &lt;legend&gt; element to be unstyled.</legend>
 				</fieldset>
-				<fieldset>
+				<fieldset id="input-checkbox">
 					<input type="checkbox">
-					<input type="checkbox">
-					<label>Expect a &lt;input type="checkbox"&gt; element to be unstyled</label>
+					<label>Expect an &lt;input type="checkbox"&gt; element to be unstyled</label>
 				</fieldset>
-				<fieldset>
+				<fieldset id="input-radio">
 					<input type="radio">
-					<input type="radio">
-					<label>Expect a &lt;input type="radio"&gt; element to be unstyled</label>
+					<label>Expect an &lt;input type="radio"&gt; element to be unstyled</label>
 				</fieldset>
-				<fieldset>
+				<fieldset id="input-text">
 					<label>Expext an &lt;input type="text"&gt; element to be</label>
 					<input type="text" value="the same font">
 				</fieldset>
-				<fieldset>
+				<fieldset id="input-email">
 					<label>Expext an &lt;input type="email"&gt; element to be</label>
 					<input type="email" value="the same font">
 				</fieldset>
-				<fieldset>
+				<fieldset id="input-search">
+					<label>Expect an &lt;input type="search"&gt; to be</label>
+					<input type="search" value="the same font">
+				</fieldset>
+				<fieldset id="input-url">
+					<label>Expect an &lt;input type="url"&gt; to be</label>
+					<input type="url" value="the same font">
+				</fieldset>
+				<fieldset id="input-number">
 					<label>Expext an &lt;input type="number"&gt; element to be the same font</label>
 					<input type="number" value="0">
 				</fieldset>
-				<fieldset>
+				<fieldset id="input-tel">
+					<label>Expext an &lt;input type="tel"&gt; element to be</label>
+					<input type="tel" value="the same font">
+				</fieldset>
+				<fieldset id="input-password">
 					<label>Expect an &lt;input type="password"&gt; to be</label>
 					<input type="password" value="illegibile">
 				</fieldset>
-				<fieldset>
+				<fieldset id="input-file">
 					<label>Expect an &lt;input type="file"&gt; to be unstyled</label>
 					<input type="file">
 				</fieldset>
-				<fieldset>
+				<fieldset id="input-reset">
 					<label>Expect an &lt;input type="reset"&gt; to be</label>
 					<input type="reset" value="like a button">
 				</fieldset>
-				<fieldset>
+				<fieldset id="input-submit">
 					<label>Expect an &lt;input type="submit"&gt; to be</label>
 					<input type="submit" value="like a button">
+				</fieldset>
+				<fieldset id="input-button">
+					<label>Expect an &lt;input type="button"&gt; to be</label>
+					<input type="button" value="like a button">
+				</fieldset>
+				<fieldset id="input-range">
+					<label>Expect an &lt;input type="range"&gt; to be</label>
+					<input type="range" value="the same font">
+				</fieldset>
+				<fieldset id="input-color">
+					<label>Expect an &lt;input type="color"&gt; to be</label>
+					<input type="color" value="the same font">
+				</fieldset>
+				<fieldset id="input-date">
+					<label>Expect an &lt;input type="date"&gt; to be</label>
+					<input type="date" value="the same font">
+				</fieldset>
+				<fieldset id="input-month">
+					<label>Expect an &lt;input type="month"&gt; to be</label>
+					<input type="month" value="the same font">
+				</fieldset>
+				<fieldset id="input-week">
+					<label>Expect an &lt;input type="week"&gt; to be</label>
+					<input type="week" value="the same font">
+				</fieldset>
+				<fieldset id="input-time">
+					<label>Expect an &lt;input type="time"&gt; to be</label>
+					<input type="time" value="the same font">
+				</fieldset>
+				<fieldset id="input-datetime">
+					<label>Expect an &lt;input type="datetime"&gt; to be</label>
+					<input type="datetime" value="the same font">
+				</fieldset>
+				<fieldset id="input-datetime-local">
+					<label>Expect an &lt;input type="datetime-local"&gt; to be</label>
+					<input type="datetime-local" value="the same font">
 				</fieldset>
 			</form>
 		</section>
@@ -180,6 +234,44 @@
 
 		<section id="elements-table">
 			<h1>Tables</h1>
+
+			<table>
+				<thead>
+					<tr>
+						<th>Expext a &lt;th&gt; element</th>
+						<th>to be</th>
+						<th>bold</th>
+						<th>and</th>
+						<th>centered</th>
+					</tr>
+				</thead>
+
+				<tfoot>
+					<tr>
+						<td>Expext a &lt;td&gt; element</td>
+					</tr>
+					<tr>
+						<td>in a &lt;tfoot&gt; element</td>
+						<td>to be</td>
+						<td>unstyled</td>
+						<td>and</td>
+						<td>left-aligned</td>
+					</tr>
+				</tfoot>
+
+				<tbody>
+					<tr>
+						<td>Expext a &lt;td&gt; element</td>
+					</tr>
+					<tr>
+						<td>in a &lt;tbody&gt; element</td>
+						<td>to be</td>
+						<td>unstyled</td>
+						<td>and</td>
+						<td>left-aligned</td>
+					</tr>
+				</tbody>
+			</table>
 		</section>
 
 		<hr>
@@ -187,10 +279,25 @@
 		<section id="elements-media">
 			<h1>Media</h1>
 
-			<!-- audio -->
-			<!-- video -->
-			<!-- canvas -->
-			<!-- svg -->
+			<audio controls>
+				<source src="horse.ogg" type="audio/ogg">
+				<source src="horse.mp3" type="audio/mpeg">
+				Expect fallback &lt;audio&gt; text to be unstyled.
+			</audio>
+
+			<video width="320" height="240" controls>
+				<source src="movie.mp4" type="video/mp4">
+				<source src="movie.ogg" type="video/ogg">
+				Expect fallback &lt;video&gt; text to be unstyled.
+			</video>
+
+			<br>
+
+			<canvas></canvas>
+
+			<br>
+
+			<svg><text x="0" y="50%">Expect an &lt;svg&gt; element to be unstyled.</text></svg>
 		</section>
 	</body>
 </html>

@@ -94,7 +94,7 @@ ul, /* 2, 3, 4 */
 var, /* 2, 3 */
 video { /* [1], 2, 3 */
 	/* padding: 0; [> [1], 2, 3, [4] <] */
-	/* vertical-align: baseline; [> [1], 2, 3 <] */
+	/* vertical-align: middle; [> [1], 2, 3 <] */
 }
 
 /** @deprecated */
@@ -168,15 +168,10 @@ legend,
 fieldset,
 textarea {
 	margin: 0; /* 1, 4 */
-	border: 0;
+	/* border: 0; */
 	padding: 0;
 	font: inherit; /* 1, 4 */
   line-height: normal; /* 1 */
-}
-
-textarea,
-input {
-	vertical-align: text-top;
 }
 
 button,
@@ -185,7 +180,7 @@ input[type="reset"],
 input[type="submit"],
 input[type="file"] {
   cursor: pointer; /* 1 */
-	appearance: none; /* [1] */
+	/* appearance: none; [> [1] <] */
   /* -moz-appearance: none; */
   /* -webkit-appearance: none; [> 1 <] */
 }
@@ -204,6 +199,49 @@ pre {
 /* address, cite, dfn, i, var { */
   /* font-style: normal; */ /* [4] */
 /* } */
+
+textarea,
+input {
+	vertical-align: bottom;
+}
+
+input[type="checkbox"],
+input[type="radio"],
+input[type="color"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="file"],
+input[type="datetime"],
+input[type="datetime-local"],
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+label {
+	vertical-align: middle;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+	cursor: pointer;
+}
+
+sub, sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sup {
+	top: -0.5em;
+}
+
+sub {
+	bottom: -0.25em;
+}
 
 progress,
 meter {
