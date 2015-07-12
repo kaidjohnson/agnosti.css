@@ -1,0 +1,25 @@
+{
+  "name": "agnosti.css",
+  "version": "0.0.1",
+  "authors": [
+    "Kai Johnson <kaidjohnson@gmail.com>"
+  ],
+  "description": "An unopinionated css cross-browser equalizer.",
+  "main": "agnosti.css",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "css",
+    "normalize",
+    "reset"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
